@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{148FB73C-366B-4886-B4D1-734572456FAD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BFL_SMS</RootNamespace>
+    <AssemblyName>BFL_SMS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>msg611516700-12472.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Attendance">
+      <HintPath>..\..\..\..\Downloads\Attendance.dll</HintPath>
+    </Reference>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CLASSROOM_INFOMATION.cs" />
+    <Compile Include="Course_Infomation.cs" />
+    <Compile Include="DBCONNECTION.cs" />
+    <Compile Include="frmNewStudent_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewStudent_List.Designer.cs">
+      <DependentUpon>frmNewStudent_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FULLTIME_SCORE.cs" />
+    <Compile Include="Grade_Infomation.cs" />
+    <Compile Include="PAL\Forms\CrystalReportInvoicePayement.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportInvoicePayement.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PAL\Forms\CR_INCOMEDESIGN.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_INCOMEDESIGN.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PAL\Forms\CR_STUDENT_ID_CARD.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_STUDENT_ID_CARD.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PAL\Forms\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\Forms\frmForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\Forms\frmForgetPassword.Designer.cs">
+      <DependentUpon>frmForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\Forms\frmLOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\Forms\frmLOGIN.Designer.cs">
+      <DependentUpon>frmLOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\Forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\Forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\Forms\frmPrinIvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\Forms\frmPrinIvoice.Designer.cs">
+      <DependentUpon>frmPrinIvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\User Control\frmCourse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PAL\User Control\frmCourse.Designer.cs">
+      <DependentUpon>frmCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\User Control\frmGrade.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PAL\User Control\frmGrade.Designer.cs">
+      <DependentUpon>frmGrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\User Control\frmReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PAL\User Control\frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\User Control\frmScoremanagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PAL\User Control\frmScoremanagement.Designer.cs">
+      <DependentUpon>frmScoremanagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\User Control\frmStudent_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PAL\User Control\frmStudent_Control.Designer.cs">
+      <DependentUpon>frmStudent_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\User Control\frmStudent_Fee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PAL\User Control\frmStudent_Fee.Designer.cs">
+      <DependentUpon>frmStudent_Fee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\User Control\UserControlAddClass.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PAL\User Control\UserControlAddClass.Designer.cs">
+      <DependentUpon>UserControlAddClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\User Control\UserControlAddStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PAL\User Control\UserControlAddStudent.Designer.cs">
+      <DependentUpon>UserControlAddStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\User Control\UserControlDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PAL\User Control\UserControlDashboard.Designer.cs">
+      <DependentUpon>UserControlDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\User Control\UserControlRegister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PAL\User Control\UserControlRegister.Designer.cs">
+      <DependentUpon>UserControlRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PARTTIME_SCORE.cs" />
+    <Compile Include="PAYMENT_INFOMATION.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SHIFT_INFOMATION.cs" />
+    <Compile Include="Student_NotYetPaying.cs" />
+    <Compile Include="STUDENT_REGISTER.cs" />
+    <Compile Include="STUENTINFOMATIONSTORE.cs" />
+    <EmbeddedResource Include="frmNewStudent_List.resx">
+      <DependentUpon>frmNewStudent_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\Forms\CrystalReportInvoicePayement.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportInvoicePayement.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\Forms\CR_INCOMEDESIGN.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_INCOMEDESIGN.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\Forms\CR_STUDENT_ID_CARD.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_STUDENT_ID_CARD.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\Forms\frmForgetPassword.resx">
+      <DependentUpon>frmForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\Forms\frmLOGIN.resx">
+      <DependentUpon>frmLOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\Forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\Forms\frmPrinIvoice.resx">
+      <DependentUpon>frmPrinIvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\User Control\frmCourse.resx">
+      <DependentUpon>frmCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\User Control\frmGrade.resx">
+      <DependentUpon>frmGrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\User Control\frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\User Control\frmScoremanagement.resx">
+      <DependentUpon>frmScoremanagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\User Control\frmStudent_Control.resx">
+      <DependentUpon>frmStudent_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\User Control\frmStudent_Fee.resx">
+      <DependentUpon>frmStudent_Fee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\User Control\UserControlAddClass.resx">
+      <DependentUpon>UserControlAddClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\User Control\UserControlAddStudent.resx">
+      <DependentUpon>UserControlAddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\User Control\UserControlDashboard.resx">
+      <DependentUpon>UserControlDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\User Control\UserControlRegister.resx">
+      <DependentUpon>UserControlRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="PAL\Forms\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PAL\Forms\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PAL\Forms\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.gif" />
+    <None Include="Resources\msg611516700-124721.jpg" />
+    <None Include="Resources\msg611516700-12472.jpg" />
+    <None Include="Images\maximize_window_26px.png" />
+    <None Include="Images\maximize_window_24px.png" />
+    <None Include="Images\minimize_window_26px.png" />
+    <None Include="Images\close_window_26px.png" />
+    <None Include="Images\hide_24px.png" />
+    <None Include="Images\eye_24px.png" />
+    <None Include="Images\high_priority_48px.png" />
+    <None Include="Images\login_64px.png" />
+    <None Include="Images\sign_in_form_password_50px.png" />
+    <None Include="Images\lock_48px.png" />
+    <None Include="Images\protect_48px.png" />
+    <None Include="Images\msg611516700-12472.png" />
+    <None Include="Images\expand_arrow_50px.png" />
+    <None Include="Images\logout_rounded_left_16px.png" />
+    <None Include="Images\combo_chart_48px.png" />
+    <None Include="Images\attendance_48px.png" />
+    <None Include="Images\google_classroom_48px.png" />
+    <None Include="Images\student_male_40px.png" />
+    <None Include="Images\investment_portfolio_48px.png" />
+    <None Include="Images\registered_trademark_64px.png" />
+    <None Include="Images\services_48px.png" />
+    <None Include="Images\classroom_100px.png" />
+    <None Include="Images\classroom_100px1.png" />
+    <None Include="Images\student_male_100px.png" />
+    <None Include="Images\administrator_male_100px.png" />
+    <None Include="Images\search_50px.png" />
+    <None Include="Images\shutdown_24px.png" />
+    <None Include="Images\browse_folder_48px.png" />
+    <None Include="Images\save_all_48px.png" />
+    <None Include="Images\add_user_group_man_man_48px.png" />
+    <None Include="Images\registration_40px.png" />
+    <None Include="Images\cancel_48px.png" />
+    <None Include="Images\search_more_24px.png" />
+    <None Include="Images\dollar_euro_exchange_48px.png" />
+    <None Include="Images\moodle_48px.png" />
+    <None Include="Images\print_48px.png" />
+    <None Include="Images\spell_check_48px.png" />
+    <None Include="Images\minus_1_day_48px.png" />
+    <None Include="Images\plus_1_month_64px.png" />
+    <None Include="Images\plus_1_year_48px.png" />
+    <None Include="Images\calendar_1_48px.png" />
+    <Content Include="msg611516700-12472.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
